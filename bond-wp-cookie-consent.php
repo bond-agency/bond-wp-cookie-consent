@@ -3,7 +3,7 @@
 /**
  * Plugin Name:       BOND WP Cookie Consent
  * Plugin URI:        https://github.com/bond-agency/bond-wp-cookie-consent
- * Version:           0.1.0
+ * Version:           0.1.1
  * Author:            BOND Developers <dev@bond.fi>
  * Author URI:        https://bond-agency.com
  */
@@ -84,7 +84,7 @@ class BOND_Cookie_Consent {
    */
   function __construct() {
 
-    self::$version = '0.1.0';
+    self::$version = '0.1.1';
     self::$min_wp_version = '4.7';
     self::$min_php_version = '7.0';
     self::$class_dependencies = array();
@@ -112,7 +112,7 @@ class BOND_Cookie_Consent {
   function add_scripts() {
     wp_register_script(
       BOND_CC_SLUG,
-      plugin_dir_url( __FILE__ ) . 'bond-wp-cookie-consent.js',
+      plugin_dir_url( __FILE__ ) . 'assets/dist/bond-wp-cookie-consent.js',
       array(),
       self::$version,
       true
@@ -131,7 +131,13 @@ class BOND_Cookie_Consent {
    */
   function add_admin_scripts() {
     wp_enqueue_style( 'wp-color-picker' );
-    wp_enqueue_script( BOND_CC_SLUG, plugins_url( 'iris-init.js', __FILE__ ), array( 'wp-color-picker' ), false, true );
+    wp_enqueue_script(
+      BOND_CC_SLUG,
+      plugins_url( 'assets/dist/iris-init.js', __FILE__ ),
+      array( 'wp-color-picker' ),
+      false,
+      true
+    );
   }
 
   /**
