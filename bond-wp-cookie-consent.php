@@ -3,7 +3,7 @@
 /**
  * Plugin Name:       BOND WP Cookie Consent
  * Plugin URI:        https://github.com/bond-agency/bond-wp-cookie-consent
- * Version:           0.1.1
+ * Version:           0.1.2
  * Author:            BOND Developers <dev@bond.fi>
  * Author URI:        https://bond-agency.com
  */
@@ -504,11 +504,11 @@ class BOND_Cookie_Consent {
   function get_languages() {
     $languages = array();
     global $polylang;
-    if( function_exists( 'PPL' ) ) {
+    if( function_exists( 'pll_languages_list' ) ) {
       // for polylang versions > 1.8
-			$pl_languages = PLL()->model->get_languages_list();
+			$pl_languages = pll_languages_list();
       foreach ( $pl_languages as $pl_language ) {
-				$languages[] = $pl_language->slug;
+				$languages[] = $pl_language;
 			}
     } else if ( function_exists( 'icl_get_languages' ) ) {
       $wpml_languages = icl_get_languages('skip_missing=0');
