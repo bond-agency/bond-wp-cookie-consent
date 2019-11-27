@@ -133,7 +133,7 @@ class BOND_Cookie_Consent {
     wp_enqueue_style( 'wp-color-picker' );
     wp_enqueue_script(
       BOND_CC_SLUG,
-      plugins_url( 'assets/dist/iris-init.js', __FILE__ ),
+      plugins_url( 'assets/dist/admin.js', __FILE__ ),
       array( 'wp-color-picker' ),
       false,
       true
