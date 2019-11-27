@@ -3,7 +3,7 @@
 /**
  * Plugin Name:       BOND WP Cookie Consent
  * Plugin URI:        https://github.com/bond-agency/bond-wp-cookie-consent
- * Version:           0.1.2
+ * Version:           0.2.0
  * Author:            BOND Developers <dev@bond.fi>
  * Author URI:        https://bond-agency.com
  */
@@ -133,7 +133,7 @@ class BOND_Cookie_Consent {
     wp_enqueue_style( 'wp-color-picker' );
     wp_enqueue_script(
       BOND_CC_SLUG,
-      plugins_url( 'assets/dist/iris-init.js', __FILE__ ),
+      plugins_url( 'assets/dist/admin.js', __FILE__ ),
       array( 'wp-color-picker' ),
       false,
       true
