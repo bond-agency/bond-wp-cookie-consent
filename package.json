@@ -1,6 +1,6 @@
 {
   "name": "bond-wp-cookie-consent",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "main": "fuse.js",
   "repository": "git@github.com:bond-agency/bond-wp-cookie-consent.git",
   "author": "Roope Merikukka <roope.merikukka@bond.fi>",

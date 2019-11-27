@@ -3,7 +3,7 @@
 /**
  * Plugin Name:       BOND WP Cookie Consent
  * Plugin URI:        https://github.com/bond-agency/bond-wp-cookie-consent
- * Version:           0.1.2
+ * Version:           0.2.0
  * Author:            BOND Developers <dev@bond.fi>
  * Author URI:        https://bond-agency.com
  */
