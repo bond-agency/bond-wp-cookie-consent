@@ -28,8 +28,10 @@ class BondCookieBar {
   setBarPosition () {
     if (this._settings.position === 'top') {
       this._bar.style.top = 0
+      document.body.classList.add('bond-cc-bar-top')
     } else {
       this._bar.style.bottom = 0
+      document.body.classList.add('bond-cc-bar-bottom')
     }
     this._bar.style.width = '100%'
     this._bar.style.position = 'fixed'
@@ -78,6 +80,7 @@ class BondCookieBar {
 
   destroy () {
     this._bar.parentNode.removeChild(this._bar)
+    document.body.classList.remove('bond-cc-bar-visible')
   }
 
   shouldShow () {
@@ -103,6 +106,7 @@ class BondCookieBar {
   init () {
     if (this.shouldShow()) {
       document.body.appendChild(this._bar)
+      document.body.classList.add('bond-cc-bar-visible')
     }
   }
 }
