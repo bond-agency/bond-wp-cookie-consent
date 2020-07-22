@@ -96,7 +96,7 @@ class BondCookieBar {
     var today = new Date()
     today.setSeconds(today.getSeconds() + this._cookieLifespan)
     var todayUTCStr = today.toUTCString()
-    document.cookie = `${this._cookieName}=1;max-age=${this._cookieLifespan};expires=${todayUTCStr}`
+    document.cookie = `${this._cookieName}=1;max-age=${this._cookieLifespan};expires=${todayUTCStr};path=/`
   }
 
   hasCookie () {
